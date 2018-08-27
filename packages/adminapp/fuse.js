@@ -23,7 +23,7 @@ context(
                 target: "browser@es6",
                 useTypescriptCompiler: true,
                 alias: {
-                    "@yourcompany/components": "../components"
+                    "@yourcompany/components": "../../components"
                 },
                 plugins: [
                     WebIndexPlugin({
