@@ -1,0 +1,26 @@
+{
+    "name": "@yourcompany/adminapp",
+    "version": "0.1.1",
+    "description": "Merely uses the components",
+    "typings": "lib/index.d.ts",
+    "scripts": {
+        "watch": "node fuse",
+        "dist": "node fuse dist"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@yourcompany/components": "^0.1.1",
+        "react": "^16.4.2",
+        "react-dom": "^16.4.2"
+    },
+    "devDependencies": {
+        "fuse-box": "^3.4.0",
+        "@types/react": "^16.4.11",
+        "@types/react-dom": "^16.0.7",
+        "@types/react-router-dom": "^4.3.0",
+        "postcss": "^7.0.2",
+        "postcss-modules": "^1.3.2"
+    }
+}
