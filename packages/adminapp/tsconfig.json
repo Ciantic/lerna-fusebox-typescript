@@ -1,9 +1,17 @@
 {
-    "extends": "../../tsconfig.settings.json",
     "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "strict": true,
+        "composite": true,
+        "esModuleInterop": true,
+        "jsx": "react",
+
         "outDir": "lib",
-        "rootDir": "src",
-        "jsx": "react"
+        "rootDir": "src"
     },
     "references": [{ "path": "../components" }]
 }
