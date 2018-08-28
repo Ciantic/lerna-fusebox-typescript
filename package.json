@@ -1,5 +1,6 @@
 {
-    "devDependencies": {
-        "lerna": "^3.1.4"
-    }
+  "devDependencies": {
+    "lerna": "^3.1.4",
+    "fuse-box": "^3.5.0"
+  }
 }
