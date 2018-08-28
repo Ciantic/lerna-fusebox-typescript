@@ -17,18 +17,18 @@ context(
     class {
         getConfig() {
             return FuseBox.init({
-                homeDir: "src",
+                homeDir: "packages",
                 output: "dist/$name.js",
                 hash: this.isProduction,
                 target: "browser@es6",
                 useTypescriptCompiler: true,
                 alias: {
-                    "@yourcompany/components": "../../components"
+                    "@yourcompany/": "~/packages/"
                 },
                 plugins: [
                     WebIndexPlugin({
                         title: "Just testing...",
-                        template: "src/index.html"
+                        template: "~/adminapp/src/index.html"
                         //path: "/static/"
                     }),
                     [
@@ -68,13 +68,13 @@ context(
             const app = fuse.bundle("static/app");
             const vendor = fuse
                 .bundle("static/vendor")
-                .instructions("~ index.tsx");
+                .instructions("~ ~/adminapp/src/index.tsx");
             app.splitConfig({ dest: "static" });
             if (!this.isProduction) {
                 app.watch();
                 app.hmr();
             }
-            app.instructions(">index.tsx");
+            app.instructions(">~/adminapp/src/index.tsx");
             return app;
         }
 
@@ -84,7 +84,7 @@ context(
                 const app = server.httpServer.app;
                 app.use("/", express.static(dist));
                 app.get("*", function(req, res) {
-                    res.sendFile(path.join(dist, "index.html"));
+                    res.sendFile(path.join(dist, "~/adminapp/src/index.html"));
                 });
             });
         }
